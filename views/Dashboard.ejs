@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= Title %></title>
+    <link rel="stylesheet" href="DashboardStyle.css">
+</head>
+<body>
+
+    <nav>
+        <div>
+            <img id="open" src="icons8-menu.svg" alt="" height="30px" width="30px">
+            <h1><%= Title %></h1>
+        </div>
+        
+        <ul>
+            <li><a href="/">Profile</a></li>
+            <li><a href="/Done">Users</a></li>
+            <li><a href="/">Add User</a></li>
+            <li><a href="">Tasks</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-btn">
+        <div class="buttons">
+            <button>Admins</button>
+            <button>Members</button>
+        </div>
+    </div>
+    
+
+    <div class="container">
+    <div class="SideBar">
+        <img id="close" src="icons8-x-64.png" height="40px" width="40px">
+        <h1><%= Title %></h1>
+        <ul>
+            <li><a href="/">Profile</a></li>
+            <li><a href="/Done">Users</a></li>
+            <li><a href="/">Add User</a></li>
+            <li><a href="/Tasks">Tasks</a></li>
+        </ul>
+        
+    </div>
+
+     
+    <div class="table">
+        <table>
+            <!-- <caption><h1>Dashboard</h1></caption> -->
+            
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Member name</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            
+                <tbody>
+                    <% for(let i = 0; i < arr.length; i++){ %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= arr[i].Userrr %></td>
+                            <td><%= arr[i].Age %></td>
+                            <td><%= arr[i].Country ? arr[i].Country : "Empty" %></td>                           
+                            <td> <div id="operationsBtn"><button class="operationsDelete"><a href="/delete/<%= arr[i]._id %>"><img src="icons8-delete.svg" alt="" height="25px" width="25px"></a></button> <button class="operationsUpdate"><a href="/update/<%= arr[i]._id %>"><img src="icons8-edit-profile-32-removebg-preview.png" alt="" height="25px" width="25px"></a></button></div> </td>
+                        </tr>
+                        
+                    <% } %>
+                </tbody>
+                   
+                    
+            
+        </table>
+    </div>
+
+
+    </div>
+
+
+        <script src="SideBar.js"></script>
+    
+</body>
+</html>

@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "body-parser": "^1.20.3",
+    "connect-livereload": "^0.6.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "livereload": "^0.9.3",
     "mongoose": "^8.6.3",
     "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.15",
@@ -13,7 +15,8 @@
   "main": "Express.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "watch": "nodemon --ext *"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update user</title>
+</head>
+<body>
+    <h1>Update User</h1>
+
+
+    <form action="/update/<%= arr._id %>" method="post">
+        <input type="text" name="Userrr" value="<%= arr.Userrr %>">
+        <input type="text" name="Age" value="<%= arr.Age %>">
+        <input type="text" name="Country" value="<%= arr.Country %>">
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
